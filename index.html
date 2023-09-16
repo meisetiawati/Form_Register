@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Form Register dan List Pendaftar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="tabs" >
+      <button class="tablinks" onclick="openTab(event, 'Registrasi')">
+        Registrasi
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'ListPendaftar')">
+        List Pendaftar
+      </button>
+    </div>
+        <div class="title">Form Register</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-inbox">
+                <span class="details">Nama</span>
+                <input type="text" id="nama" name="nama" minlength="10" required>     
+              </div>
+              <div class="input-inbox">
+                <span class="details">Umur</span>
+                <input type="number" id="umur" name="umur" min="25" required>
+              </div>
+              <div class="input-inbox">
+                <span class="details">Uang Sangu</span>
+                <input type="number" id="uangSangu" name="uangSangu" min="100000" max="1000000" required>
+              </div>
+            </div>
+              <button type="button" onclick="submitForm()">Submit</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+      </table>
+    </div>
+    <div id="ListPendaftar" class="tabcontent">
+      <!-- Tabel List Pendaftar -->
+      <table id="pendaftarTable" border="1" align="center">
+        <thead>
+          <tr>
+            <td>Nama</td>
+            <td>Umur</td>
+            <td>Uang Sangu</td>
+          </tr>
+        </thead>
+        <tbody id="pendaftarData"></tbody>
+      </table>
+      <p id="resume" align="center">
+        Rata-rata pendaftar memiliki uang sangu sebesar
+        <span id="avgUangSangu">0</span> dengan rata-rata umur
+        <span id="avgUmur">0</span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
